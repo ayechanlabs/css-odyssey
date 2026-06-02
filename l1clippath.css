@@ -1,0 +1,97 @@
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: steelblue;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+
+    border-radius: 50%;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+
+    /* border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 100px solid steelblue; */
+
+    /* border-left: 100px solid steelblue;
+    border-right: 100px solid transparent;
+    border-bottom: 100px solid transparent; */
+
+    border-left: 100px solid transparent;
+    border-right: 100px solid steelblue;
+    border-bottom: 100px solid transparent;
+}
+
+.square-shape {
+    width: 100px;
+    height: 100px;
+    background-color: steelblue;
+
+    float: left;
+    margin-right: 10px;
+}
+
+.circle-shape {
+    width: 100px;
+    height: 100px;
+    background-color: steelblue;
+
+    /* 
+    same as -> clip-path: circle(); 
+    */
+    border-radius: 50%;
+    overflow: hidden;
+
+    float: left;
+    margin-right: 20px;
+
+    shape-outside: circle();
+}
+
+.ellipse-shape {
+    width: 100px;
+    height: 100px;
+    background-color: steelblue;
+
+    clip-path: ellipse(50% 70%);
+    shape-outside: ellipse(50% 70%);
+
+    float: left;
+    margin-right: 20px;
+}
+
+.polygon-shape {
+    width: 100px;
+    height: 100px;
+    background-color: steelblue;
+
+    clip-path: polygon(
+    50% 0%,       /* Top point */
+    100% 100%,    /* Bottom right */
+    75% 100%,     /* Inner right bottom */
+    62% 75%,      /* Inner right top */
+    38% 75%,      /* Inner left top */
+    25% 100%,     /* Inner left bottom */
+    0% 100%       /* Bottom left */
+    );
+    shape-outside: polygon(
+    50% 0%,       /* Top point */
+    100% 100%,    /* Bottom right */
+    75% 100%,     /* Inner right bottom */
+    62% 75%,      /* Inner right top */
+    38% 75%,      /* Inner left top */
+    25% 100%,     /* Inner left bottom */
+    0% 100%       /* Bottom left */
+    );
+
+    float: left;
+    margin-right: 20px;
+}

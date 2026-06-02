@@ -1,0 +1,30 @@
+.div1, .div2, .div3 {
+    width: 200px;
+    height: 100px;
+    background-color: green;
+    color: #ffffff;
+
+    border: 20px solid red;
+    outline: 10px solid blue;
+
+    padding: 20px;
+}
+
+.div2 {
+    /* အဲလို ပေးလိုက်ရင် သူရဲ့ မူရင်းမှာ ရှိတဲ့ သတ်မှတ်ထားတဲ့ width and height မှာ နေရာ တိုးပြီသွားယူမှာ
+    လက်ရှိ ရှိတဲ့ box ထဲမှာပဲ effect ဖြစ်သွား စေချင်တယ်ဆိုရင် box-sizing ကိုပဲ သုံးလို့ရတယ် */
+    box-sizing: border-box;
+}
+
+.div3 {
+    box-sizing: content-box;
+}
+
+.div4 {
+    width: 200px;
+    height: 100px;
+    background-color: blue;
+    color: #ffffff;
+
+    margin-left: 20px;
+}
