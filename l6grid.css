@@ -12,6 +12,17 @@ body {
 
     display: grid;
     grid-template-columns: auto auto auto auto auto;
+
+    /* grid-gap: 10px; */
+    gap: 10px;
+    /* top&bottom left&right */
+    /* gap: 10px 20px; */
+
+    /* grid-column-gap: 10px;
+    grid-row-gap: 10px; */
+
+    /* column-gap: 10px;
+    row-gap: 10px; */
 }
 
 /* container ထဲမှာရှိတဲ့ child တွေ အကုန်လုံး */
