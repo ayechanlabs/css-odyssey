@@ -1,0 +1,29 @@
+body {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 1200px;
+    /* background-color: grey; */
+
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+/* container ထဲမှာရှိတဲ့ child တွေ အကုန်လုံး */
+.container > *{
+    /* width: 200px; */
+    height: 80px;
+}
+
+.container div:nth-of-type(odd) {
+    background-color: blue;
+}
+
+.container div:nth-of-type(even) {
+    background-color: steelblue;
+}
