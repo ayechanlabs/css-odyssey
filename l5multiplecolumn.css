@@ -1,0 +1,22 @@
+section {
+    column-count: 3;
+    column-gap: 20px;
+
+    /* column-rule: 3px dashed steelblue; */
+    column-width: 3px;
+    column-rule-style: dotted;
+    column-rule-color: green;
+}
+
+section h1{
+    background-color: steelblue;
+    color: #ffffff;
+    text-align: center;
+
+    /* default is "none". */
+    column-span: all;
+}
+
+section p{
+    text-align: justify;
+}

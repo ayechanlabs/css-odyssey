@@ -1,0 +1,21 @@
+body {
+    counter-reset: idx;
+}
+
+h2::before {
+    counter-increment: idx;
+
+    /* content: counter(idx); */
+    content: "Section " counter(idx) ": ";
+}
+
+h2 {
+    counter-reset: sub-idx;
+}
+
+h3::before {
+    counter-increment: sub-idx;
+
+    /* content: counter(sub-idx); */
+    content: "Lesson "counter(idx) "." counter(sub-idx) ": ";
+}
