@@ -1,0 +1,145 @@
+body {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 1200px;
+    background-color: #f4f4f4;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+/* container ထဲမှာရှိတဲ့ child တွေ အကုန်လုံး */
+.container > *{
+    height: 100px;
+}
+
+.container div:nth-of-type(odd) {
+    background-color: blue;
+}
+
+.container div:nth-of-type(even) {
+    background-color: steelblue;
+}
+
+.div1 {
+    cursor: default;
+}
+
+.div2 {
+    cursor: none;
+}
+
+.div3 {
+    cursor: no-drop;
+}
+
+.div4 {
+    cursor: not-allowed;
+}
+
+.div5 {
+    cursor: wait;   
+}
+
+.div6 {
+    cursor: progress;
+}
+
+.div7 {
+    cursor: move;
+}
+
+.div8 {
+    cursor: all-scroll;
+}
+
+.div9 {
+    cursor: zoom-in;
+}
+
+.div10 {
+    cursor: zoom-out;
+}
+
+.div11 {
+    cursor: help;
+}
+
+.div12 {
+    cursor: copy;
+}
+
+.div13 {
+    cursor: crosshair;
+}
+
+.div14 {
+    cursor: e-resize;
+}
+
+.div15 {
+    cursor: w-resize;
+}
+
+.div16 {
+    cursor: s-resize;
+}
+
+.div17 {
+    cursor: n-resize;
+}
+
+.div18 {
+    cursor: ne-resize;
+}
+
+.div19 {
+    cursor: sw-resize;
+}
+
+.div20 {
+    cursor: se-resize;
+}
+
+.div21 {
+    cursor: nw-resize;
+}
+
+.div22 {
+    cursor: col-resize;
+}
+
+.div23 {
+    cursor: row-resize;
+}
+
+.div24 {
+    cursor: text;
+}
+
+.div25 {
+    cursor: vertical-text;
+}
+
+.div26 {
+    cursor: context-menu;
+}
+
+.div27 {
+    cursor: cell;
+}
+
+.div28 {
+    cursor: alias;
+}
+
+.div29 {
+    cursor: pointer;
+}

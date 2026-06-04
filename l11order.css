@@ -1,0 +1,73 @@
+body {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 1200px;
+    height: 800px;
+    background-color: grey;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+}
+
+/* container ထဲမှာရှိတဲ့ child တွေ အကုန်လုံး */
+.container > *{
+    width: 300px;
+    height: 100px;
+}
+
+.container div:nth-of-type(odd) {
+    background-color: blue;
+}
+
+.container div:nth-of-type(even) {
+    background-color: steelblue;
+}
+
+.div1 {
+    order: 2;
+}
+
+.div2 {
+    order: 4;
+}
+
+.div3 {
+    order: 6;
+}
+
+.div4 {
+    order: 8;
+}
+
+.div5 {
+    order: 10;
+}
+
+.div6 {
+    order: 1;
+}
+
+.div7 {
+    order: 3;
+}
+
+.div8 {
+    order: 5;
+}
+
+.div9 {
+    order: 7;
+}
+
+.div10 {
+    order: 9;
+}
