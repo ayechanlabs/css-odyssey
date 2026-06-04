@@ -1,0 +1,81 @@
+body {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 1200px;
+    height: 800px;
+    background-color: grey;
+
+    display: flex;
+
+    /* 
+    start = left, center = middle, end = right
+    space-between -> သူက content တခုနဲ့ တခု ကြားထဲမှာ space တွေ ဝင်သွားမှာ
+    space-around -> သူက element တခု ချင်းဆီရဲ့ ‌ဘေးနားမှာ margin တွေ ပတ်"လည် ဝင်သွားတာ
+    */
+    justify-content: center;
+
+    /* start = top, center = middle, end = bottom */
+    align-items: center;
+
+    /* 
+    row = default
+    column = သူက ‌ဒေါင်းလိုက်ပြလိုက်တာ
+    column-reverse က column ကို ‌ပြောင်းပြန် ပေါ်စေချင်တာ
+    row-reverse က row ကို ပြောင်းပြန် ပေါ်စေချင်တာ
+    display: flex နဲ့ ဆိုရင် justify-content: center က horizontal ကို ဖြစ်ပြီ align-item: center က vertical ကို ဖြစ်စေတယ်
+    ဒါမဲ့ flex-direction: column ပါလိုက်ပြီဆိုရင် justify-content: center and align-item: center က ပြောင်းပြန်ဖြစ်သွားတယ်။
+     */
+    flex-direction: column;
+
+    flex-wrap: wrap;
+}
+
+/* container ထဲမှာရှိတဲ့ child တွေ အကုန်လုံး */
+.container > *{
+    width: 300px;
+    height: 100px;
+}
+
+.container div:nth-of-type(odd) {
+    background-color: blue;
+}
+
+.container div:nth-of-type(even) {
+    background-color: steelblue;
+}
+
+/* .div1 {
+}
+
+.div2 {
+}
+
+.div3 {
+}
+
+.div4 {
+}
+
+.div5 {
+}
+
+.div6 {
+}
+
+.div7 {
+}
+
+.div8 {
+}
+
+.div9 {
+}
+
+.div10 {
+} */
