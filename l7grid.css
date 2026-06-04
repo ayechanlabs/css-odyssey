@@ -1,0 +1,49 @@
+body {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 1200px;
+    /* background-color: grey; */
+
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+
+    /* grid-gap: 10px; */
+    /* gap: 10px; */
+    /* top&bottom left&right */
+    /* gap: 10px 20px; */
+
+    /* grid-column-gap: 10px;
+    grid-row-gap: 10px; */
+
+    /* column-gap: 10px;
+    row-gap: 10px; */
+
+    /* Fractional Unit (fr) */
+    /* သူ column ခွဲတာပဲ ဒါမဲ့ fr ဆိုတဲ့ unit နဲ့ခွဲတာ */
+    /* grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr; */
+
+    /* grid-template-columns: 100px 1fr;
+    grid-template-columns: 1fr 100px; */
+}
+
+/* container ထဲမှာရှိတဲ့ child တွေ အကုန်လုံး */
+.container > *{
+    /* width: 200px; */
+    height: 80px;
+}
+
+.container div:nth-of-type(odd) {
+    background-color: blue;
+}
+
+.container div:nth-of-type(even) {
+    background-color: steelblue;
+}

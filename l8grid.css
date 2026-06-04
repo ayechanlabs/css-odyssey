@@ -1,0 +1,53 @@
+body {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 1200px;
+    background-color: grey;
+
+    display: grid;
+
+    /* grid-template-columns: repeat(col, size) */
+    /* grid-template-columns: repeat(1, 100px); */
+    /* grid-template-columns: repeat(2, 100px); */
+
+    /* grid-template-columns: repeat(auto-fill, 100px); */
+    /* grid-template-columns: repeat(auto-fill, 200px); */
+
+    /* grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr); */
+
+    /* grid-template-columns: 1fr repeat(2, 100px); */
+    /* grid-template-columns: 1fr repeat(2, 1fr);
+    grid-template-columns: 100px 100px repeat(3, 1fr); */
+
+    /* grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 100px 1fr);
+    grid-template-columns: repeat(2, 1fr 100px);
+    grid-template-columns: repeat(3, 1fr 100px);
+    grid-template-columns: repeat(4, 100px 1fr); */
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 100px 200px 1fr);
+    grid-template-columns: repeat(3, 1fr 100px 1fr);
+}
+
+/* container ထဲမှာရှိတဲ့ child တွေ အကုန်လုံး */
+.container > *{
+    /* width: 200px; */
+    height: 80px;
+}
+
+.container div:nth-of-type(odd) {
+    background-color: blue;
+}
+
+.container div:nth-of-type(even) {
+    background-color: steelblue;
+}

@@ -1,0 +1,76 @@
+body {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 1200px;
+    background-color: grey;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "div1 div1 div1"
+        "div2 div2 div3"
+        "div4 div5 div5"
+        "div6 div7 div8"
+        "div9 div10 div10"
+}
+
+/* container ထဲမှာရှိတဲ့ child တွေ အကုန်လုံး */
+.container > *{
+    /* width: 200px; */
+    height: 80px;
+}
+
+.container div:nth-of-type(odd) {
+    background-color: blue;
+}
+
+.container div:nth-of-type(even) {
+    background-color: steelblue;
+}
+
+.div1 {
+    grid-area: div1;
+}
+
+.div2 {
+    grid-area: div2;
+}
+
+.div3 {
+    grid-area: div3;
+}
+
+.div4 {
+    grid-area: div4;
+}
+
+.div5 {
+    grid-area: div5;
+}
+
+.div6 {
+    grid-area: div6;
+}
+
+.div7 {
+    grid-area: div7;
+}
+
+.div8 {
+    grid-area: div8;
+}
+
+.div9 {
+    grid-area: div9;
+}
+
+.div10 {
+    grid-area: div10;
+}
