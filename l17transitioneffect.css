@@ -1,0 +1,53 @@
+.container {
+    width: 1200px;
+    background-color: gray;
+
+    margin: 10px 0;
+}
+
+.container .square {
+    width: 150px;
+    height: 50px;
+    background-color: red;
+    color: #fff;
+    font-size: 20px;
+
+    text-align: center;
+    line-height: 50px;
+
+    border-radius: 3px;
+
+    transition-property: transform;
+    transition-duration: 5s;
+
+    /* default = ease */
+    /* transition-timing-function: ease; */
+}
+
+.container .square:hover {
+    transform: translate(1050px);
+}
+
+#ease {
+    transition-timing-function: ease;
+}
+
+/* အချိန်ကို အချိုး"ကျ သွားတာ ပုံမှန်တိုင်းသွားတာ */
+#linear {
+    transition-timing-function: linear;
+}
+
+/* အထွက်မှာ နှေး" ထွက်ပြီ အလယ်မှာ မြန်"သွားတယ် အဝင်မှာ စောင့်ပြီတော့ ဝင်သွားတာ */
+#ease-in {
+    transition-timing-function: ease-in;
+}
+
+/* စထွက်မှာ နှေးတယ် ပြန်ဝင်တဲ့အခါမှာ  မြန်သွားတယ် */
+#ease-out {
+    transition-timing-function: ease-out;
+}
+
+/* အထွက်ကော အဝင်ကော နှေး"နဲ့ သွားတယ် အလယ်မှာတော့ မြန်သွားတယ်။ */
+#ease-in-out {
+    transition-timing-function: ease-in-out;
+}
