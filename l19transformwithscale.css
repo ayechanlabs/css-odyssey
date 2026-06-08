@@ -1,0 +1,48 @@
+.container {
+    width: 1200px;
+    background-color: gray;
+
+    /* 1rem = 16px
+    rem = root element's font size */
+    /* margin: 3rem 0; */
+    margin: 48px 0;
+}
+
+.container .square {
+    width: 150px;
+    height: 70px;
+    background-color: red;
+    color: #fff;
+    font-size: 20px;
+
+    text-align: center;
+    line-height: 70px;
+
+    border-radius: 3px;
+
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+
+#scale:hover {
+    /* scale (angleXY) -> default is 1. */
+    /* transform: scale(0); */
+    transform: scale(1.5);
+}
+
+#scalexy:hover {
+    /* scale(x, y) */
+    transform: scale(1, 2);
+    /* transform: scale(2, 3); */
+}
+
+#scalex:hover {
+    /* scaleX(angleX) */
+    transform: scaleX(0.5);
+}
+
+#scaley:hover {
+    /* scaleY(angleY) */
+    transform: scaleY(1.5);
+}
