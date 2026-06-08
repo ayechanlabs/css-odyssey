@@ -1,0 +1,54 @@
+.container {
+    width: 1200px;
+    background-color: gray;
+
+    /* 1rem = 16px
+    rem = root element's font size */
+    margin: 3rem 0;
+}
+
+.container .square {
+    width: 150px;
+    height: 50px;
+    background-color: red;
+    color: #fff;
+    font-size: 20px;
+
+    text-align: center;
+    line-height: 50px;
+
+    border-radius: 3px;
+
+    transition-property: transform;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+}
+
+#rotate:hover {
+    /* rotate(angle-xy) မှာ အလုပ်လုပ်မှာ။ */
+
+    /* transform: rotate(45deg); */
+    /* transform: rotate(-45deg); */
+    /* transform: rotate(90deg); */
+    /* transform: rotate(180deg); */
+
+    /* 360 deg = 1 turn -> can use negative values */
+    /* transform: rotate(360deg); */
+
+    /* 400 grad = 360 deg = 1 turn -> can use negative values */
+    transform: rotate(400grad);
+}
+
+#rotatex:hover {
+    /* transform: rotateX(45deg); */
+    /* transform: rotateX(-45deg); */
+    /* transform: rotateX(90deg); */
+    /* transform: rotateX(-90deg); */
+
+    transform: rotateX(-180deg);
+}
+
+#rotatey:hover {
+    /* transform: rotateY(90deg); */
+    transform: rotateY(-90deg);
+}
