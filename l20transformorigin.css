@@ -1,0 +1,34 @@
+body {
+    height: 100vh;
+
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+
+    display: grid;
+    place-items: center;
+}
+
+img {
+    width: 400px; 
+    height: 250px;
+
+    /* 
+    top (horizontally top center)
+    center (picture center) -> can also gives as 50%
+    bottom (horizontally bottom center)
+    left -> same as (left center) -> can also gives as 0
+    right -> same as (right center) -> can also gives as 100%
+
+    x y
+    left top (0 0), left bottom, left center
+    right top, right bottom, right center
+     */
+    transform-origin: right center;
+
+    transition: transform 2s linear;
+}
+
+img:hover {
+    transform: rotate(45deg);
+}
