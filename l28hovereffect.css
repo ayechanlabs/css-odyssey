@@ -1,0 +1,55 @@
+body {
+    height: 100vh;
+    font-family: sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 40px;
+    border: 5px solid #000000;
+
+    padding: 40px 80px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+/* 
+element တခုကနေ အမြဲတမ်း element 2ခု ပွားလို့ရတယ်။
+sudo element ကို သုံးပြီ
+before & after ဆိုပြီ
+ */
+
+a::before {
+    content: '';
+
+    width: 100%;
+    height: 100%;
+    background-color: steelblue;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    transform: rotate(90deg);
+    transform-origin: right bottom;
+    transition: transform 1s ease-in;
+
+    /* 
+    z-index မှာ default value က 0
+    minus ပေးရင် အောက်ရောက်သွားမယ်
+    plus ပေးရင် အပေါ်ရောက်သွားမယ်
+     */
+    z-index: -1;
+}
+
+a:hover::before {
+    transform: rotate(0deg);
+}
+
