@@ -1,0 +1,36 @@
+* {
+    perspective: 500px;
+}
+
+body {
+    height: 100vh;
+
+    display: grid;
+    place-items: center;
+}
+
+.container img {
+    width: 300px;
+
+    transition: transform 1s linear;
+}
+
+.container img:hover {
+    /* transform: rotateX(45deg); */
+    /* transform: rotateX(90deg); */
+    /* transform: rotateX(180deg); */
+    /* transform: rotateX(1turn); */
+
+    /* transform: rotateX(-45deg); */
+    /* transform: rotateX(-90deg); */
+    /* transform: rotateX(-180deg); */
+
+    /* transform: rotateY(45deg); */
+    /* transform: rotateY(90deg); */
+    /* transform: rotateY(180deg); */
+    /* transform: rotateY(1turn); */
+
+    /* transform: rotateY(-45deg); */
+    /* transform: rotateY(-90deg); */
+    transform: rotateY(-180deg);
+}
