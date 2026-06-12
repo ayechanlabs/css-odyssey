@@ -1,0 +1,72 @@
+body {
+    font-family: sans-serif;
+    height: 100vh;
+
+    text-align: center;
+    align-content: center;
+
+    margin: 0;
+}
+
+button {
+    background: transparent;
+    font-size: 40px;
+
+    border: 5px solid #000000;
+
+    padding: 40px 80px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+button::before {
+    content: 'Thank You';
+
+    width: 100%;
+    height: 100%;
+    background: #434343;
+    color: #ffffff;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transform: scaleX(0);
+    opacity: 0;
+    transition: all 0.5s ease;
+
+    z-index: 1;
+}
+
+button:hover::before {
+    transform: scaleX(1);
+    opacity: 1;
+}
+
+button::after {
+    content: '';
+
+    width: 100%;
+    height: 100%;
+    background: #434343;
+    color: #ffffff;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    transform: scaleY(0);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+button:hover::after {
+    transform: scaleY(1);
+    opacity: 1;
+}
