@@ -83,5 +83,3 @@ button::after {
 button:active::after {
     transform: scale(1) rotate(1turn);
 }
-
-
