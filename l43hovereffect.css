@@ -1,0 +1,74 @@
+body {
+    font-family: sans-serif;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    background: none;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: none;
+
+    padding: 25px 80px;
+    margin: 0 20px;
+
+    position: relative;
+
+    cursor: pointer ;
+}
+
+.download-btn {
+    background-color: steelblue;
+}
+
+.upload-btn {
+    background-color: violet;
+}
+
+.btn::before {
+    content: "";
+
+    width: 60px;
+    height: 100%;
+    font-size: 150%;
+    font-family: "Font Awesome 5 Free";
+
+    text-align: center;
+    align-content: center;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.download-btn::before {
+    content: "\f019";
+    background-color: skyblue;
+}
+
+.upload-btn::before {
+    content: "\f093";
+    background-color: blueviolet;
+}
+
+.download-btn:hover {
+    background-color: deepskyblue;
+}
+
+.upload-btn:hover {
+    background-color: royalblue;
+}
+
+.download-btn:active {
+    background-color: mediumslateblue;
+}
+
+.upload-btn:active {
+    background-color: darkviolet;
+}
