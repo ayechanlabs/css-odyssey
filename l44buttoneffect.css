@@ -1,0 +1,40 @@
+body {
+    font-family: sans-serif;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    width: 200px;
+    height: 60px;
+    background: linear-gradient(
+        60deg,
+        blue,
+        skyblue,
+        blue,
+        skyblue
+    );
+    background-size: 300%;
+    color: #ffffff;
+    font-size: 20px;
+
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+
+    transition: background-position .5s ease-in-out;
+
+    cursor: pointer;
+}
+
+.btn:active {
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.4);
+    transform: translateY(4px);
+}
+
+.btn:hover {
+    background-position: right;
+}
