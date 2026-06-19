@@ -1,0 +1,99 @@
+body {
+    font-family: sans-serif;
+    height: 100vh;
+    background-color: #006F63;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    width: 350px;
+    height: 65px;
+    background-color: #000000;
+    color: #ffffff;
+
+    cursor: pointer;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.btn span {
+    color: #ffffff;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+
+    /* 
+    Note -> if you want to use transform, then the element must be block element.
+     */
+    display: block;
+    transform: scaleX(0.7);
+    transform-origin: left;
+}
+
+/* 
+transform တွေက inline elements တွေပေါ်မှာ သက်ရောက်မှုမရှိဘူး
+အာ့ကြောင့် block element ပြောင်းပေးရမယ်။
+ */
+
+.btn em {
+    width: 100%;
+    height: 5px;
+    background-color: #ffffff;
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+
+    transform: scale(0.25);
+    transform-origin: right;
+
+    transition: left .3s ease-in-out;
+}
+
+.btn::before, .btn::after{
+    content: "";
+
+    width: 100%;
+    height: 40%;
+    background: #ffffff;
+}
+
+.btn::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    transform: translateX(-100%);
+    transition: all .3s ease-in-out;
+}
+
+.btn::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    transform: translateX(100%);
+    transition: all .3s ease-in-out;
+}
+
+.btn:hover::before {
+    transform: translateX(90%) skew(45deg);
+}
+
+.btn:hover::after {
+    transform: translateX(-90%) skew(45deg);
+}
+
+.btn:hover span {
+    color: yellow;
+}
+
+.btn:hover em {
+    left: -20%;
+}
+
