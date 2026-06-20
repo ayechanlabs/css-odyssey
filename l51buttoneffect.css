@@ -1,0 +1,50 @@
+body {
+    font-family: sans-serif;
+    height: 100vh;
+    background-color: #000000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    width: 300px;
+    height: 100px;
+    background-color: #222222;
+    color: #ffffff;
+    font-size: 40px;
+
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    position: relative;
+}
+
+.btn .line {
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
+
+    position: absolute;
+    left: 50%;
+    top: 0;
+
+    transform: translateX(-50%);
+    transition: all .5s ease;
+}
+
+.btn:hover .line {
+    width: 200px;
+    height: 80px;
+    /* background-color: green; */
+
+    border-radius: 10px;
+    border-bottom: 2px solid #f4f4f4;
+}
+
+.btn:hover {
+    background-color: #555555;
+}
