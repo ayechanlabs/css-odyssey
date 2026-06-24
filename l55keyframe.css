@@ -1,0 +1,42 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    background-color: steelblue;
+
+    animation-name: myani;
+    animation-duration: 3s;
+}
+
+@keyframes myani {
+    /* from {
+        transform: translate(0px);
+    }
+
+    to {
+        transform: translate(1000px);
+    } */
+
+    /* 0% {
+        transform: translate(0px);
+    }
+
+    100% {
+        transform: translate(1000px);
+    } */
+
+    /* 
+    အဲလို to-from တို့ 0%-100% တို့ မပါပဲနဲ့လည်း ရေးလို့ရတယ်။ 
+    */
+    /* to {
+        transform: translate(100px);
+    } */
+
+    100% {
+        transform: translate(1000px);
+    }
+}
