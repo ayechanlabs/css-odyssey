@@ -1,0 +1,35 @@
+body {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+    margin: 0;
+}
+
+.spinner {
+    width: 100px;
+    height: 100px;
+
+    /* animation-name: myspinner;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; */
+
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: myspinner 2s linear infinite;
+}
+
+@keyframes myspinner {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+

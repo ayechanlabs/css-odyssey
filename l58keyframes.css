@@ -1,0 +1,33 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.box1 {
+    width: 150px;
+    height: 150px;
+    background-color: steelblue;
+
+    animation-name: myani;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    /* we can give starting from 1 to infinite */
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    /* reverse = ပြောင်းပြန်, alternate = အသွား-အပြန်, alternate-reverse = အသွား-အပြန် ပြောင်းပြန် */
+    animation-direction: normal;
+}
+
+@keyframes myani {
+    0% {
+        transform: translate(0px);
+    }
+
+    50% {
+        transform: translate(600px);
+    }
+
+    100% {
+        transform: translate(600px, 600px);
+    }
+}
