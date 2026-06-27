@@ -23,11 +23,23 @@ body {
 }
 
 @keyframes myspinner {
-    from {
-        transform: rotate(0turn);
+    0% {
+        transform: rotate(0turn) scale(1);
     }
 
-    to {
-        transform: rotate(1turn);
+    25% {
+        transform: rotate(360deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(360deg) scale(1.5);
+    }
+
+    75% {
+        transform: rotate(0deg) scale(1.5);
+    }
+
+    50% {
+        transform: rotate(0deg) scale(1);
     }
 }
