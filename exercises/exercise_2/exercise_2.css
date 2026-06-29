@@ -1,0 +1,104 @@
+body {
+    background-color: #000000;
+    font-family: sans-serif;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+}
+
+.glitch_button {
+    background: linear-gradient(
+        135deg,
+        #1b2a4a,
+        #2a1b4a
+    );
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+
+    position: relative;
+
+    padding: 20px 40px;
+
+    cursor: pointer;
+    overflow: hidden;
+
+    transition: all .2s ease;
+}
+
+.glitch_button:hover {
+    background: linear-gradient(
+        45deg,
+        #00f2fe 0%, 
+        #4facfe 25%, 
+        #7f00ff 50%, 
+        #e100ff 100%
+    );
+
+    box-shadow: 0 0 20px rgba(0, 242, 254, 0.6);
+
+    animation-name: earthquake;
+    animation-duration: .25s;
+    animation-timing-function: steps(1);
+    animation-iteration-count: infinite;
+}
+
+@keyframes earthquake {
+    0% { 
+        transform: translate(0, 0); 
+        filter: hue-rotate(0deg); 
+    }
+    
+    20% { 
+        transform: translate(-3px, 1px); 
+        filter: hue-rotate(40deg); 
+    }
+
+    40% { 
+        transform: translate(2px, -2px); 
+        filter: hue-rotate(-40deg); 
+    }
+    
+    60% { 
+        transform: translate(-1px, 2px); 
+        filter: hue-rotate(80deg); 
+    }
+    
+    80% { 
+        transform: translate(3px, -1px); 
+        filter: hue-rotate(-80deg); 
+    }
+
+    100% { 
+        transform: translate(-2px, -1px); 
+        filter: hue-rotate(0deg); 
+    }
+}
+
+.glitch_button::before {
+    content: "";
+
+    background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 4px 4px;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
