@@ -1,0 +1,42 @@
+body {
+    height: 100vh;
+
+    text-align: center;
+    align-content: center;
+
+    margin: 0;
+}
+
+.radio-design {
+    -webkit-appearance: none;
+    appearance: none;
+
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+
+    border: 2px solid #000000;
+    border-radius: 50%;
+
+    margin: 0 10px;
+    cursor: pointer;
+
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#radio-1:checked {
+    background-color: red !important;
+    border-color: red;
+}
+
+#radio-2:checked {
+    background-color: green !important;
+    border-color: green;
+}
+
+#radio-3:checked {
+    background-color: blue !important;
+    border-color: blue;
+}
+

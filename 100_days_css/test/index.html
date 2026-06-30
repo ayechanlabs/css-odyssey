@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Button Showcase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#" class="nav-link active" data-target="glow-section">Glow Effects</a>
+            <a href="#" class="nav-link" data-target="slide-section">Slide Effects</a>
+            <a href="#" class="nav-link" data-target="3d-section">3D Effects</a>
+        </nav>
+    </header>
+
+    <main class="showcase-container">
+        
+        <section id="glow-section" class="content-section active">
+            <h2>Neon & Glow Effects</h2>
+            <div class="button-grid">
+                <button class="btn btn-glow">Neon Glow</button>
+            </div>
+        </section>
+
+        <section id="slide-section" class="content-section">
+            <h2>Slide & Hover Effects</h2>
+            <div class="button-grid">
+                <button class="btn btn-slide"><span>Slide In</span></button>
+            </div>
+        </section>
+
+        <section id="3d-section" class="content-section">
+            <h2>3D & Press Effects</h2>
+            <div class="button-grid">
+                <button class="btn btn-3d">Push Me</button>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

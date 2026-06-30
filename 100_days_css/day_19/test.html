@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure CSS Background Switcher</title>
+    <style>
+        /* Base Page Setup */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* 1. Full-screen background layers */
+        .bg-layer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1; /* Puts them behind everything */
+            transition: opacity 1s ease;
+            opacity: 0; /* Hidden by default */
+        }
+
+        /* Assign colors to each background layer */
+        #bg-red   { background-color: #ff7675; }
+        #bg-blue  { background-color: #74b9ff; }
+        #bg-green { background-color: #55efc4; }
+
+        /* Default background if nothing is selected yet */
+        .default-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -2;
+            background-color: #ffffff;
+        }
+
+        /* 2. CSS Magic: Show the correct background when a radio is checked */
+        #radio-red:checked   ~ #bg-red,
+        #radio-blue:checked  ~ #bg-blue,
+        #radio-green:checked ~ #bg-green {
+            opacity: 1;
+        }
+
+        /* Control Panel Styling */
+        .controls {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            z-index: 10; /* Ensures controls stay on top */
+        }
+
+        .option {
+            margin: 10px 0;
+            display: block;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="radio" name="bgColor" id="radio-red" style="display: none;">
+    <input type="radio" name="bgColor" id="radio-blue" style="display: none;">
+    <input type="radio" name="bgColor" id="radio-green" style="display: none;">
+
+    <div id="bg-red" class="bg-layer"></div>
+    <div id="bg-blue" class="bg-layer"></div>
+    <div id="bg-green" class="bg-layer"></div>
+    <div class="default-bg"></div>
+
+    <div class="controls">
+        
+        <label for="radio-red" class="option">
+            <input type="radio" name="dummy" onclick="document.getElementById('radio-red').click()"> Original Red Radio
+        </label>
+        
+        <label for="radio-blue" class="option">
+            <input type="radio" name="dummy" onclick="document.getElementById('radio-blue').click()"> Original Blue Radio
+        </label>
+        
+        <label for="radio-green" class="option">
+            <input type="radio" name="dummy" onclick="document.getElementById('radio-green').click()"> Original Green Radio
+        </label>
+    </div>
+
+</body>
+</html>

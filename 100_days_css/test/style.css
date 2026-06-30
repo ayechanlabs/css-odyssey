@@ -1,0 +1,136 @@
+/* Base Page Reset & Layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121214;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Navigation Bar */
+header {
+    width: 100%;
+    background-color: #1a1a1e;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-link {
+    color: #aaa;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #fff;
+    background-color: #3b82f6;
+}
+
+/* Single-Page Section Toggling */
+.showcase-container {
+    max-width: 800px;
+    width: 100%;
+    padding: 40px 20px;
+}
+
+.content-section {
+    display: none; /* Hide all sections by default */
+    text-align: center;
+}
+
+.content-section.active {
+    display: block; /* Only show the active section */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.button-grid {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =======================================
+   BUTTON EFFECTS (Add your own here!)
+   ======================================= */
+
+.btn {
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    background: none;
+    color: white;
+    position: relative;
+    outline: none;
+}
+
+/* 1. Neon Glow */
+.btn-glow {
+    border: 2px solid #00f2fe;
+    border-radius: 8px;
+    color: #00f2fe;
+    transition: 0.3s;
+}
+.btn-glow:hover {
+    background: #00f2fe;
+    color: #121214;
+    box-shadow: 0 0 20px #00f2fe, 0 0 40px #00f2fe;
+}
+
+/* 2. Slide In */
+.btn-slide {
+    border: 2px solid #ff007f;
+    overflow: hidden;
+    z-index: 1;
+}
+.btn-slide span { z-index: 2; position: relative; }
+.btn-slide::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: #ff007f;
+    transition: 0.4s;
+    z-index: 1;
+}
+.btn-slide:hover::before { left: 0; }
+
+/* 3. 3D Press */
+.btn-3d {
+    background: #34d399;
+    border-radius: 6px;
+    box-shadow: 0 6px #059669;
+    transition: all 0.1s;
+}
+.btn-3d:active {
+    box-shadow: 0 2px #059669;
+    transform: translateY(4px);
+}
